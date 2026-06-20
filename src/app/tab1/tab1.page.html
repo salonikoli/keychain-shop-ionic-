@@ -1,17 +1,112 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Keychain Shop
     </ion-title>
+    <div slot="end" class="cart-badge-container">
+      <ion-icon name="cart" class="header-icon"></ion-icon>
+      <ion-badge color="success" *ngIf="cartCount > 0" class="cart-count-badge">
+        Cart: {{ cartCount }}
+      </ion-badge>
+      <ion-badge color="medium" *ngIf="cartCount === 0" class="cart-count-badge">
+        Cart: 0
+      </ion-badge>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Welcome Banner Section -->
+  <div class="banner-section">
+    <img 
+      src="assets/keybanner01.avif" 
+        alt="Keychain Shop Banner"
+      class="banner-image"
+    />
+    <div class="banner-overlay">
+      <h1 class="banner-title">Keychain Shop</h1>
+      <p class="banner-subtitle">Premium Quality Keychains</p>
+    </div>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Welcome Message -->
+  <div class="welcome-section">
+    <p class="welcome-text">
+      Discover our exclusive collection of stylish and durable keychains. Perfect gifts for friends and family!
+    </p>
+  </div>
+
+  <!-- Popular Keychains Section -->
+  <div class="popular-section">
+    <h2 class="section-heading">Popular Keychains</h2>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeSm="6" sizeMd="6" sizeLg="3" *ngFor="let product of popularProducts">
+          <ion-card class="product-card">
+            <img 
+              [src]="product.image" 
+              alt="{{ product.name }}"
+              class="product-image"
+            />
+            <ion-card-header>
+              <ion-card-title class="product-name">{{ product.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p class="product-description">{{ product.description }}</p>
+              <div class="product-footer">
+                <span class="product-price">${{ product.price }}</span>
+                <ion-button 
+                  size="small" 
+                  fill="solid"
+                  color="primary"
+                  (click)="addToCart(product)"
+                >
+                  <ion-icon slot="start" name="add-circle"></ion-icon>
+                  Add
+                </ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- All Products Section -->
+  <div class="all-products-section">
+    <h2 class="section-heading">All Keychains</h2>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeSm="6" sizeMd="6" sizeLg="3" *ngFor="let product of products">
+          <ion-card class="product-card">
+            <img 
+              [src]="product.image" 
+              alt="{{ product.name }}"
+              class="product-image"
+            />
+            <ion-card-header>
+              <ion-card-title class="product-name">{{ product.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p class="product-description">{{ product.description }}</p>
+              <div class="product-footer">
+                <span class="product-price">${{ product.price }}</span>
+                <ion-button 
+                  size="small" 
+                  fill="solid"
+                  color="primary"
+                  (click)="addToCart(product)"
+                >
+                  <ion-icon slot="start" name="add-circle"></ion-icon>
+                  Add
+                </ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

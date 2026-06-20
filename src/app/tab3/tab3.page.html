@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-icon slot="start" name="information-circle" class="header-icon"></ion-icon>
+    <ion-title>About Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="about-container">
+    <ion-card class="about-card">
+      <ion-card-header>
+        <ion-card-title>Welcome to Keychain Shop</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Keychain Shop is your one-stop destination for premium quality keychains. We offer a wide variety of stylish, durable, and functional keychains perfect for personal use or as gifts.
+        </p>
+      </ion-card-content>
+    </ion-card>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-card class="about-card">
+      <ion-card-header>
+        <ion-card-title>Our Mission</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          To provide customers with high-quality, innovative keychains that combine style and functionality. We believe that every keychain should be a reflection of personal taste and individuality.
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="about-card">
+      <ion-card-header>
+        <ion-card-title>Why Choose Us?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="features-list">
+          <li>Premium Quality Materials</li>
+          <li>Affordable Prices</li>
+          <li>Wide Variety of Designs</li>
+          <li>Fast & Secure Shipping</li>
+          <li>Excellent Customer Service</li>
+          <li>Satisfaction Guaranteed</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="about-card">
+      <ion-card-header>
+        <ion-card-title>Contact Us</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          <strong>Email:</strong> support@keychainshop.com<br>
+          <strong>Phone:</strong> +1 (555) 123-4567<br>
+          <strong>Address:</strong> 123 Shop Street, City, State 12345
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

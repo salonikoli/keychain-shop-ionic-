@@ -35,3 +35,183 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* ============================================
+   KEYCHAIN SHOP - Custom Global Styles
+   ============================================ */
+
+:root {
+  --ion-primary: #667eea;
+  --ion-secondary: #764ba2;
+  --ion-danger: #f04141;
+  --ion-success: #10dc60;
+  --ion-warning: #ffce00;
+  --ion-light: #f4f5f8;
+  --ion-medium: #989aa2;
+  --ion-dark: #222428;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+
+  &:hover {
+    background: #764ba2;
+  }
+}
+
+/* Ion-content Background */
+ion-content {
+  --background: #f9f9f9;
+}
+
+/* Ion-card Enhancements */
+ion-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+
+  &:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Ion-button Enhancements */
+ion-button {
+  --border-radius: 8px;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Ion-badge Enhancements */
+ion-badge {
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+}
+
+/* Ion-toast Customization */
+ion-toast {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color: white;
+  --border-radius: 12px;
+  font-weight: 600;
+
+  &.success-toast {
+    --background: linear-gradient(135deg, #10dc60 0%, #0cc64e 100%);
+  }
+
+  ion-button {
+    --color: white;
+  }
+}
+
+/* Ion-toolbar Styling */
+ion-toolbar {
+  --background: white;
+  --border-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+  ion-title {
+    font-weight: 600;
+  }
+}
+
+/* Ion-input Styling */
+ion-input {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+/* Responsive Typography */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
